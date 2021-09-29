@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'fuhaobang/css/bootstrap.min.css' %}">
+    <title>富豪榜</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid text-center" style="background-image: url(./static/images/headers/header-01.jpeg); background-size: cover; height: auto; margin-bottom:0;">
+        <h1>中国富豪榜</h1>
+    </div>
+
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+               
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 1</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">4377.2亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/mayun-1.jpg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>马云</h4>
+                                        <p class="card-text">中国首富<br>阿里巴巴集团创始人<br>日本软银集团董事</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 2</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">3683.2亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/mahuateng-1.jpg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>马化腾</h4>
+                                        <p class="card-text">前中国首富<br>腾讯公司创始人<br>现任腾讯公司董事会主席兼首席执行官<br>全国青联副主席</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 3</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">3596.5亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/zhongshanshan-1.jpg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>钟睒睒</h4>
+                                        <p class="card-text">养生堂创始人<br>农夫山泉创始人<br>前万泰生物董事长</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 4</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">2335.4亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/sunpiaoyang-1.jpg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>孙飘扬</h4>
+                                        <p class="card-text">养生堂创始人<br>农夫山泉创始人<br>前万泰生物董事长</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 5</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">2148.5亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/hexiangjian-1.jpeg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>何享健</h4>
+                                        <p class="card-text">养生堂创始人<br>农夫山泉创始人<br>前万泰生物董事长</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 6</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">2148.5亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/wangwei-1.jpg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>王卫</h4>
+                                        <p class="card-text">养生堂创始人<br>农夫山泉创始人<br>前万泰生物董事长</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 7</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">2041.8亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/huangzheng-1.jpg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>黄峥</h4>
+                                        <p class="card-text">养生堂创始人<br>农夫山泉创始人<br>前万泰生物董事长</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 8</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">1901.7亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/yanghuiyan-1.png" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>杨惠妍</h4>
+                                        <p class="card-text">养生堂创始人<br>农夫山泉创始人<br>前万泰生物董事长</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 9</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">1848.3亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/zhangyiming-1.jpg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>张一鸣</h4>
+                                        <p class="card-text">养生堂创始人<br>农夫山泉创始人<br>前万泰生物董事长</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>  
+                                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-header">No. 10</div> 
+                            <div class="card-body">
+                              <h3><span class="badge badge-info float-right">1808.2亿</span></h3>
+                               <h3></h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="img-square-wrapper">
+                                            <img class="" src="./static/images/portrait/xujiayin-1.jpeg" class="rounded" width="100" height="100">
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-9">
+                                        <h4>许家印</h4>
+                                        <p class="card-text">养生堂创始人<br>农夫山泉创始人<br>前万泰生物董事长</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>     
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+
+</body>
+</html>

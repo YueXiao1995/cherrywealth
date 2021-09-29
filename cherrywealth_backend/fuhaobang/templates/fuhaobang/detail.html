@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% load mathfilters %}
+    {% load fuhaobang_extra_tags %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="{% static 'fuhaobang/favicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'fuhaobang/css/bootstrap.min.css' %}">
+    <title>富豪榜</title>
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'fuhaobang/css/mdb.min.css' %}" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+
+
+    <div class="jumbotron jumbotron-fluid text-center" style="background-image: url({% static 'fuhaobang/images/headers/header-01.jpeg' %}); background-size: cover; height: auto; margin-bottom:0;">
+        <h1>{{ person.name }}</h1>
+    </div>
+    <p id="demo"></p>
+
+
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+
+            </div>
+
+            <div class="col-sm-1"></div>
+        </div>
+
+
+
+    </div>
+
+
+
+<div class="container" style="margin-top:30px">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>生平经历</h2>
+                <!-- Timeline -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="timeline-main">
+                            <!-- Timeline Wrapper -->
+                            <ul class="stepper stepper-vertical timeline timeline-simple timeline-images pl-0">
+                                {% if person.event_set %}
+                                    {% for event in event_list %}
+                                        <li>
+                                            <!--Section Title -->
+                                            <a href="#!">
+                                                <span class="badge cyan lighten-1">{{ event.display_time }}</span>
+                                            </a>
+
+                                            <!-- Section Description -->
+                                            {% if event.id|mod:2 != 0 %}
+                                                <div class="step-content mr-xl-3 p-0 hoverable">
+                                            {% else %}
+                                                <div class="step-content ml-3 p-0 hoverable">
+                                            {% endif %}
+                                                {% if event.attachment_type == 'Video' %}
+                                                    <div class="embed-responsive embed-responsive-16by9">
+                                                        <video controls="true" class="embed-responsive-item rounded">
+                                                            <source src="{% static event.video.url|cut_url %}" type="video/mp4" />
+                                                        </video>
+                                                    </div>
+                                                {% elif event.attachment_type == 'Image' %}
+                                                    <img src="{% static event.image.url|cut_url %}" class="img-fluid" alt="Responsive image">
+                                                {%  endif%}
+
+                                                <h4 class="font-weight-bold p-4 mb-0">{{ event.title }}</h4>
+                                                <p class="text-muted px-4 mb-0"><i class="far fa-clock" aria-hidden="true"></i>{{ event.location }}</p>
+                                                <p class="mb-0 p-4">{{ event.brief_intro }}</p>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                {% endif %}
+                            </ul>
+                            <!-- Timeline Wrapper -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline -->
+            </div>
+
+            <div class="col-sm-1">
+                <br/>
+            </div>
+
+            <div class="col-sm-5">
+                <h2>最新报道</h2>
+                <br>
+                <div class="container-fluid">
+                    <div class="row">
+                        {% if person.link_set %}
+                            {% for link in person.link_set.all %}
+                                {% if link.link_type == 'News' %}
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <img class="card-img-top" src="{% static link.image.url|cut_url %}" alt="Card image" style="width:100%">
+                                            <div class="card-body">
+                                                <h4 class="card-title">{{ link.title }}</h4>
+                                                <p class="card-text">{{ link.brief_intro }}</p>
+                                                <a href="{{ link.link }}">
+                                                    去了解
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        <br>
+                    </div>
+                </div>
+
+                <h2>其他</h2>
+                <br>
+                <div class="container-fluid">
+                    <div class="row">
+                        {% if person.link_set %}
+                            {% for link in person.link_set.all %}
+                                {% if link.link_type == 'Other' %}
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <img class="card-img-top" src="{% static link.image_url %}" alt="Card image" style="width:100%">
+                                            <div class="card-body">
+                                                <h4 class="card-title">{{ link.title }}</h4>
+                                                <p class="card-text">{{ link.brief_intro }}</p>
+                                                <a href="{{ link.link }}">
+                                                    去了解
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        <br>
+                    </div>
+                </div>
+
+
+                <h2>关于{{ person.name }}的书</h2>
+                <br>
+                <div class="container-fluid">
+                    {% if person.link_set %}
+                        {% for link in person.link_set.all %}
+                            {% if link.link_type == 'Book' %}
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <img class="card-img-top" src="{% static link.image_url %}" alt="Card image" style="width:100%">
+                                        <div class="card-body">
+                                            <h4 class="card-title">{{ link.title }}</h4>
+                                            <p class="card-text">{{ link.brief_intro }}</p>
+                                            <a href="{{ link.link }}">
+                                                去购买
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            <br>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
